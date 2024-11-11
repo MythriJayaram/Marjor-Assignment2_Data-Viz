@@ -21,7 +21,7 @@
         h1 { text-align: center; font-size: 2.5em; color: #151515; margin-bottom: 0.5em; }
         h3 { text-align: center; color: #191919; margin-top: -10px; }
         h4 { text-align: center; color: #121212; margin-top: 10px; font-size: 1.2em; }
-        .map-container { display: flex; justify-content: center; margin-top: 15px; }
+        .map-container { display: flex; justify-content: center; margin-top: 20px; }
         svg { border: 1px solid #ccc; }
         #tooltip {
             position: absolute;
@@ -182,6 +182,8 @@
 
                 const tooltipB = d => 
                     `<strong>Town:</strong> ${d.properties.TOWN}<br>
+                    <strong>Population (1980):</strong> ${d.properties.POP1980}<br>
+                    <strong>Population (2010):</strong> ${d.properties.POP2010}<br>
                     <strong>Population Change (1980-2010):</strong> ${d.properties.POP2010 - d.properties.POP1980}`;
 
                 createMap("#mapA", d => d.properties.POP1980, colorScales.pop1980, tooltipA);
